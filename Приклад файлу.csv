@@ -1,0 +1,12 @@
+Field Name,Alias,Data Type
+OBJECTID,OBJECTID,OBJECTID
+Shape,Shape,Geometry
+str_id,ID запису про вулицю,Text
+str_type,Тип дорожньо-вуличної мережі,Long
+codifier,КАТОТТГ,Text
+str_name,Назва вулиці (чинна),Text
+name_old,Назва вулиці (архівна),Text
+note,Примітка,Text
+name_eng,Назва вулиці латиницею,Text
+additional,Уточнююча частина назви вулиці,Text
+Shape_Length,Shape_Length,Double

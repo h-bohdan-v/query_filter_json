@@ -1,0 +1,12 @@
+Field Name,Alias,Data Type,Allow Null
+OBJECTID,,Object ID,FALSE
+Shape,,Geometry,TRUE
+str_id,str_id,Text,TRUE
+str_type,str_type,Long,TRUE
+codifier,codifier,Text,TRUE
+str_name,str_name,Text,TRUE
+name_old,name_old,Text,TRUE
+note,note,Text,TRUE
+name_eng,name_eng,Text,TRUE
+additional,additional,Text,TRUE
+Shape_Length,,Double,TRUE
