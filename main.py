@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import time
+import copy
 
 column_config = {
             "Alias": st.column_config.Column(
@@ -161,14 +162,11 @@ if uploaded_file is not None:
         result_df = edited_df[edited_df['Enable'] == True]
         result_list = []
         for index in result_df.index:            
-            temp_json = json_temp[result_df['Data Type'][index]].copy()
+            temp_json = copy.deepcopy(json_temp[result_df['Data Type'][index]])
             temp_json['fieldObj']['name'] = result_df['Field Name'][index]
             temp_json['fieldObj']['label'] = result_df['Alias'][index]
-            result_list.append(temp_json)
-            
-            # temp_json['fieldObj']['name'] = result_df['Field Name'][index]
-            # temp_json['fieldObj']['label'] = result_df['Alias'][index]
-            # result_list.append(temp_json)
+            temp_json['interactiveObj']['prompt'] = result_df['Alias'][index]
 
-        # result_list
-        json_temp
+            result_list.append(temp_json)
+
+        result_list
